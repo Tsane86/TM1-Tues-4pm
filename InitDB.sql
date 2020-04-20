@@ -2,6 +2,7 @@ CREATE TABLE User (
     EmailAddress VARCHAR(30) NOT NULL,
     FirstName VARCHAR(20),
     LastName VARCHAR(20),
+    Gender VARCHAR(6),
     DOB DATE,
     StreetNo VARCHAR(5),
     Address VARCHAR(40),
@@ -10,6 +11,7 @@ CREATE TABLE User (
     Postcode VARCHAR(4),
     UserPassword VARCHAR(20),
     CONSTRAINT User_PK PRIMARY KEY (EmailAddress),
+    CONSTRAINT Gender_Lim CHECK (Gender = 'MALE' OR GENDER = 'FEMALE' OR GENDER = 'OTHER'),
     CONSTRAINT State_Lim CHECK (State = 'NSW' OR State = 'VIC' OR State = 'SA' OR State = 'TAS' OR State = 'QLD' OR State = 'NT' OR State = 'WA' OR State = 'ACT'),
     CONSTRAINT Postcode_Lim CHECK (LENGTH(Postcode) = 4)
 );
