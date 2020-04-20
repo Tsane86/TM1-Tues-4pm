@@ -1,0 +1,33 @@
+{
+  "name": "tm1-tues-4pm",
+  "version": "1.0.0",
+  "description": "eHealthCare App for SES1",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tsane86/TM1-Tues-4pm.git"
+  },
+  "keywords": [
+    "eHealthcare"
+  ],
+  "author": "Brenton, Adem, Ronny, Daisy, Liam and Jason",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tsane86/TM1-Tues-4pm/issues"
+  },
+  "homepage": "https://github.com/Tsane86/TM1-Tues-4pm#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  },
+  "dependencies": {
+    "browser-sync": "^2.26.7",
+    "csso": "^4.0.3",
+    "gulp-csso": "^4.0.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "node-sass": "^4.13.1"
+  }
+}
