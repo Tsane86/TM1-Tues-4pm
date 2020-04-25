@@ -35,10 +35,10 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto text-light">
-                <li class="nav-item active ">
+                <li class="nav-item">
                     <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item active">
                     <a class="nav-link" href="consultation.html">Consultation</a></li>
                 <li class="nav-item">
                     <a class="nav-link" href="subscriptions.html">Subscriptions</a></li>
@@ -50,7 +50,7 @@
     </nav>
     <div class="container-lg mt-5">
         <div class="row mb-1">
-            <h2>Welcome</h2>
+            <h2>Book Online Consultation</h2>
         </div>
         <div class="row">
             <div class="col-6 google-api p-2">
@@ -59,28 +59,42 @@
             <div class="col-6 px-3">
                 <ul class="nav nav-tabs">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#home1">Home</a>
+                        <a class="nav-link active" href="#home1">GP 1</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#menu1">Menu 1</a>
+                        <a class="nav-link" href="#menu1">GP 2</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#menu2">Menu 2</a>
+                        <a class="nav-link" href="#menu2">GP 3</a>
                     </li>
                 </ul>
 
                 <!-- Tab panes -->
-                <div class="tab-content border mb-3 home-content">
+                <div class="tab-content border mb-3">
                     <div id="home1" class="container tab-pane mb-3 active"><br>
-                        <h3>HOME</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua.</p>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit dolores, nulla eum
-                            obcaecati
-                            nemo totam, sunt sit praesentium iure eaque assumenda minus. Repellat ratione laborum
-                            expedita
-                            laboriosam praesentium eum cumque!</p>
-                        <h3>Image here</h3>
+                        <h3 id="doctorName">General Practioner 1</h3>
+                        <div class="form-group">
+                            <label for="selectDoctor">Doctor</label>
+                            <select id="selectDoctor" class="form-control">
+                                <option selected>Choose...</option>
+                                <option value="GP1">GP 1</option>
+                                <option value="GP2">GP 2</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="bookingDate">Booking Date</label>
+                            <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text">
+                        </div>
+                        <div class="for">
+                            <label for="bookingTime">Booking Time</label>
+                            <input class="form-control" id="date" name="date" placeholder="12:00 pm" type="text">
+                        </div>
+                        <div class="form-check mt-3">
+                            <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+                            <label class="form-check-label" for="inlineFormCheck">Urgent Booking</label>
+
+                        </div>
+                        <button type="submit" class="btn btn-primary mt-3">Book Consultation</button>
                     </div>
                     <div id="menu1" class="container tab-pane mb-3 fade"><br>
                         <h3>Menu 1</h3>
@@ -91,7 +105,8 @@
                         <h3>Menu 2</h3>
                         <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
                             laudantium, totam rem aperiam.</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae ea perferendis eum illo a
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae ea perferendis eum
+                            illo a
                             officiis voluptatem, adipisci reiciendis iure esse corporis dolores delectus quas, unde
                             saepe! Voluptatibus, impedit. Aliquid, quam!</p>
                     </div>
