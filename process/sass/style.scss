@@ -24,7 +24,14 @@ li {
   text-decoration: none;
 }
 
-.login {
-  width: 100%;
+.userLogin {
   text-align: center;
+  .list-group-item {
+  }
+}
+
+.google-api {
+  background-image: url("../img/google-api.png");
+  background-repeat: no-repeat, repeat;
+  height: 400px;
 }

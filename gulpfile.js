@@ -34,8 +34,8 @@ function styles() {
 
 function watch() {
   gulp.watch(dest + "js/**/*.js", js).on("change", browserSync.reload);
-  gulp.watch(source + "sass/**/*", styles).on("change", browserSync.reload);
-  gulp.watch(dest + "index.html", html).on("change", browserSync.reload);
+  gulp.watch(source + "sass/*.scss", styles).on("change", browserSync.reload);
+  gulp.watch(dest + "*.html", html).on("change", browserSync.reload);
 }
 
 function server() {
@@ -50,7 +50,7 @@ function server() {
     .watch(source + "sass/**/*.scss", styles)
     .on("change", browserSync.reload);
   gulp.watch(dest + "js/**/*.js", js).on("change", browserSync.reload);
-  gulp.watch(dest + "index.html", html).on("change", browserSync.reload);
+  gulp.watch(dest + "*.html", html).on("change", browserSync.reload);
 }
 
 var build = gulp.series(gulp.parallel(js, styles, html), server, watch);
