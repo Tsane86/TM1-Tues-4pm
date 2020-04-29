@@ -1,5 +1,5 @@
 ﻿@page
-@model Healthcare.Pages.loginModel
+@model eHealthcare.Pages.loginModel
 @{
     ViewData["Title"] = "login";
 }
@@ -67,7 +67,7 @@
         </div>
         
         <div class="login mt-5 text-center">
-            <!--<form>-->
+            <form method = "post">
             <div class="form-group">
                 <label for="exampleInputEmail1">Email address</label>
                 <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
@@ -80,8 +80,9 @@
                 <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
             </div>
             <button type="submit" class="btn btn-primary">Log in</button>
+            </form>
     </div>
-    <!--</form>-->
+    <!---->
             <div class="registration-patient my-5 d-none">
                 <h2>Registration</h2>
                 <div class="form-group row">

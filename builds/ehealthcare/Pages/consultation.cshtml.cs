@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace Healthcare.Pages
+namespace eHealthcare.Pages
 {
     public class consultationModel : PageModel
     {
