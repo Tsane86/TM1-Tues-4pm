@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="en">
 
-
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -11,7 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
-    <title>eHealthCare -- Home</title>
+    <title>eHealthCare -- Subscriptions</title>
 </head>
 
 <body>
@@ -35,12 +34,12 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto text-light">
-                <li class="nav-item active ">
+                <li class="nav-item">
                     <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="consultation.html">Consultation</a></li>
-                <li class="nav-item">
+                <li class="nav-item active">
                     <a class="nav-link" href="subscriptions.html">Subscriptions</a></li>
                 <li class="nav-item">
                     <a class="nav-link" href="login.html">Login</a></li>
@@ -48,60 +47,34 @@
             </ul>
         </div>
     </nav>
-    <div class="container-lg mt-5">
-        <div class="row mb-1">
-            <h2>Welcome</h2>
+
+    <div class="container-sm mt-5">
+
+        <div class="registration-doctor mt-5">
+            <h2>Medication Subscriptions -- <span id="patientName" class="patientName">John Doe</span></h2>
+
         </div>
-        <div class="row">
-
-
-            <!--GOOGLE API-->
-            <div class="col-6 p-2">
-                
+        <div id="medication" class="card mt-2">
+            <div class="card-header">
+                Example Medication
             </div>
-
-            <div class="col-6 px-3">
-                <ul class="nav nav-tabs">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#home1">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#menu1">Menu 1</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#menu2">Menu 2</a>
-                    </li>
-                </ul>
-
-                <!-- Tab panes -->
-                <div class="tab-content border mb-3 home-content">
-                    <div id="home1" class="container tab-pane mb-3 active"><br>
-                        <h3>HOME</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua.</p>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit dolores, nulla eum
-                            obcaecati
-                            nemo totam, sunt sit praesentium iure eaque assumenda minus. Repellat ratione laborum
-                            expedita
-                            laboriosam praesentium eum cumque!</p>
-                        <h3>Image here</h3>
-                    </div>
-                    <div id="menu1" class="container tab-pane mb-3 fade"><br>
-                        <h3>Menu 1</h3>
-                        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                            commodo consequat.</p>
-                    </div>
-                    <div id="menu2" class="container tab-pane mb-3 fade"><br>
-                        <h3>Menu 2</h3>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                            laudantium, totam rem aperiam.</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae ea perferendis eum illo a
-                            officiis voluptatem, adipisci reiciendis iure esse corporis dolores delectus quas, unde
-                            saepe! Voluptatibus, impedit. Aliquid, quam!</p>
-                    </div>
-                </div>
+            <div class="card-body">
+                <h5 class="card-title">Paracetamol</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="javascript:window.print()" class="btn btn-primary">Print Prescription</a>
             </div>
         </div>
+        <div id="medication2" class="card mt-3">
+            <div class="card-header">
+                Example Medication
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Nurofen</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="javascript:window.print()" class="btn btn-primary">Print Prescription</a>
+            </div>
+        </div>
+
     </div>
 
     <!-- Optional JavaScript -->
@@ -115,19 +88,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
-    <script>
-        $(document).ready(function () {
-            $(".nav-tabs a").click(function () {
-                $(this).tab('show');
-            });
-            $('.nav-tabs a').on('shown.bs.tab', function (event) {
-                var x = $(event.target).text();         // active tab
-                var y = $(event.relatedTarget).text();  // previous tab
-                $(".act span").text(x);
-                $(".prev span").text(y);
-            });
-        });
-    </script>
+
 </body>
 
 </html>

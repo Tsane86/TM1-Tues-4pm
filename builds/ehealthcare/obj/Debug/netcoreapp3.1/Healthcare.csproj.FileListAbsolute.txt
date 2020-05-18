@@ -1,0 +1,7 @@
+C:\Users\Ronny Wassef\source\repos\regtest2\obj\Debug\netcoreapp3.1\Healthcare.csproj.CoreCompileInputs.cache
+C:\Users\Ronny Wassef\source\repos\regtest2\obj\Debug\netcoreapp3.1\Healthcare.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Ronny Wassef\source\repos\regtest2\obj\Debug\netcoreapp3.1\Healthcare.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Ronny Wassef\source\repos\regtest2\obj\Debug\netcoreapp3.1\Healthcare.RazorAssemblyInfo.cache
+C:\Users\Ronny Wassef\source\repos\regtest2\obj\Debug\netcoreapp3.1\Healthcare.RazorAssemblyInfo.cs
+C:\Users\Ronny Wassef\source\repos\regtest2\obj\Debug\netcoreapp3.1\Healthcare.AssemblyInfoInputs.cache
+C:\Users\Ronny Wassef\source\repos\regtest2\obj\Debug\netcoreapp3.1\Healthcare.AssemblyInfo.cs
