@@ -5396,19 +5396,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Ronny Wassef\\.nuget\\packages\\": {}
+    "C:\\Users\\ademd\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Assignment c#\\eHealthcare.csproj",
+      "projectUniqueName": "C:\\Users\\ademd\\Documents\\Adem\\Uni\\SES\\TM1-Tues-4pm-master1\\TM1-Tues-4pm-master\\builds\\ehealthcare\\eHealthcare.csproj",
       "projectName": "eHealthcare",
-      "projectPath": "D:\\Assignment c#\\eHealthcare.csproj",
-      "packagesPath": "C:\\Users\\Ronny Wassef\\.nuget\\packages\\",
-      "outputPath": "D:\\Assignment c#\\obj\\",
+      "projectPath": "C:\\Users\\ademd\\Documents\\Adem\\Uni\\SES\\TM1-Tues-4pm-master1\\TM1-Tues-4pm-master\\builds\\ehealthcare\\eHealthcare.csproj",
+      "packagesPath": "C:\\Users\\ademd\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ademd\\Documents\\Adem\\Uni\\SES\\TM1-Tues-4pm-master1\\TM1-Tues-4pm-master\\builds\\ehealthcare\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Ronny Wassef\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ademd\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

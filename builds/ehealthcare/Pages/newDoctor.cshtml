@@ -64,14 +64,6 @@
                 <h2>Registration</h2>
                 <div class="form-group row">
                     <div class="col">
-<<<<<<< Updated upstream
-                        <label asp-for="Doctor.firstName" class="for col-form-label text-md">First Name</label>
-                        <input asp-for="Doctor.firstName" type="text" id="firstName" class="form-control" placeholder="Enter First Name">
-                    </div>
-                    <div class="col">
-                        <label asp-for="Doctor.lastName" class="for col-form-label text-md">Last Name</label>
-                        <input asp-for="Doctor.lastName" type="text" id="lastName" class="form-control" placeholder="Enter Last Name">
-=======
                         <label asp-for="Doctor.EmailAddress" class="for col-form-label text-md">Email Address</label>
                         <input asp-for="Doctor.EmailAddress" type="email" id="emailaddress" class="form-control" placeholder="Enter Email Address" required>
                     </div>
@@ -80,72 +72,38 @@
                     <div class="col">
                         <label asp-for="Doctor.Person.Password" class="for col-form-label text-md">Password</label>
                         <input asp-for="Doctor.Person.Password" type="password" id="userpassword" class="form-control" placeholder="Enter Password" required>
->>>>>>> Stashed changes
                     </div>
                 </div>
                 <div class="form-group row">
                     <div class="col">
-<<<<<<< Updated upstream
-                        <label asp-for="Doctor.DOB" class="for col-form-label text-md">Date of Birth</label>
-                        <input asp-for="Doctor.DOB" type="text" id="firstName" class="form-control" placeholder="dd/mm/yyyy">
-                    </div>
-                    <div class="col">
-                        <label asp-for="Doctor.gender" class="for col-form-label text-md">Gender</label>
-                        <input asp-for="Doctor.gender" type="text" id="lastName" class="form-control" placeholder="Enter Gender">
-=======
                         <label asp-for="Doctor.Person.FirstName" class="for col-form-label text-md">First Name</label>
                         <input asp-for="Doctor.Person.FirstName" type="text" id="firstName" class="form-control" placeholder="Enter First Name" required>
                     </div>
                     <div class="col">
                         <label asp-for="Doctor.Person.LastName" class="for col-form-label text-md">Last Name</label>
                         <input asp-for="Doctor.Person.LastName" type="text" id="lastName" class="form-control" placeholder="Enter Last Name" required>
->>>>>>> Stashed changes
                     </div>
                 </div>
                 <div class="form-group row">
                     <div class="col">
-<<<<<<< Updated upstream
-                        <label asp-for="Doctor.doctorIDNumber" class="for col-form-label text-md">Doctor ID Number</label>
-                        <input asp-for="Doctor.doctorIDNumber" type="text" id="doctorIDNumber" class="form-control" placeholder="Enter Doctor ID Number">
-=======
                         <label asp-for="Doctor.Person.Dob" class="for col-form-label text-md">Date of Birth</label>
                         <input asp-for="Doctor.Person.Dob" type="date" id="firstName" class="form-control" placeholder="dd/mm/yyyy" min="1900-01-01" max="2020-05-11" required>
->>>>>>> Stashed changes
                     </div>
                 </div>
                 <div class="form-group row">
                     <div class="col">
-<<<<<<< Updated upstream
-                        <label asp-for="Doctor.address" class="for col-form-label text-md">Address</label>
-                        <input asp-for="Doctor.address" type="text" id="address1" class="form-control" placeholder="Enter Address">
-=======
                         <label asp-for="Doctor.Person.Address" class="for col-form-label text-md">Address</label>
                         <input asp-for="Doctor.Person.Address" type="text" id="address1" class="form-control" placeholder="Enter Address" required>
->>>>>>> Stashed changes
                     </div>
                 </div>
                 <div class="form-group row">
                     <div class="col">
-<<<<<<< Updated upstream
-                        <label asp-for="Doctor.address2" class="for col-form-label text-md">Address 2</label>
-                        <input asp-for="Doctor.address2" type="text" id="address1" class="form-control" placeholder="Enter Address">
-=======
                         <label asp-for="Doctor.Speciality" class="for col-form-label text-md">Speciality</label>
                         <input asp-for="Doctor.Speciality" type="text" id="address1" class="form-control" placeholder="Enter Speciality" required>
->>>>>>> Stashed changes
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-6">
-<<<<<<< Updated upstream
-                        <label asp-for="Doctor.city">City</label>
-                        <input asp-for="Doctor.city" type="text" class="form-control" id="inputCity">
-                    </div>
-                    <div class="form-group col-md-4">
-                        <label asp-for="Doctor.state">State</label>
-                        <select asp-for="Doctor.state" id="inputState" class="form-control">
-                            <option selected>Choose...</option>
-=======
                         <label asp-for="Doctor.Person.Suburb">Suburb</label>
                         <input asp-for="Doctor.Person.Suburb" type="text" class="form-control" id="inputCity" required>
                     </div>
@@ -153,7 +111,6 @@
                         <label asp-for="Doctor.Person.State">State</label>
                         <select asp-for="Doctor.Person.State" id="inputState" class="form-control" required>
                             <option selected></option>
->>>>>>> Stashed changes
                             <option value="NSW">NSW</option>
                             <option value="ACT">ACT</option>
                             <option value="VIC">VIC</option>
@@ -164,13 +121,8 @@
                         </select>
                     </div>
                     <div class="form-group col-md-2">
-<<<<<<< Updated upstream
-                        <label asp-for="Doctor.postcode">Post Code</label>
-                        <input asp-for="Doctor.postcode" type="text" class="form-control" id="inputZip">
-=======
                         <label asp-for="Doctor.Person.Postcode">Post Code</label>
                         <input asp-for="Doctor.Person.Postcode" type="text" class="form-control" id="inputZip" required>
->>>>>>> Stashed changes
                     </div>
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
@@ -178,11 +130,6 @@
             </form>
         </div>
     </div>
-<<<<<<< Updated upstream
-
-=======
-           
->>>>>>> Stashed changes
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"

@@ -7,20 +7,12 @@ using eHealthcare.Models;
 
 namespace eHealthcare.Data
 {
-<<<<<<< Updated upstream
-    public class ApplicationDbContext : IdentityDbContext
-=======
     public class ApplicationDbContext : DbContext
->>>>>>> Stashed changes
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
         }
-<<<<<<< Updated upstream
-        public DbSet<Patient> Patient { get; set; }
-        public DbSet<Doctor> Doctor { get; set; }
-=======
         public virtual DbSet<Consultation> Consultation { get; set; }
         public virtual DbSet<Doctor> Doctor { get; set; }
         public virtual DbSet<MedicalCentre> MedicalCentre { get; set; }
@@ -144,6 +136,5 @@ namespace eHealthcare.Data
 
             //OnModelCreatingPartial(modelBuilder);
         }
->>>>>>> Stashed changes
     }
 }
