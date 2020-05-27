@@ -1,0 +1,159 @@
+﻿@page
+@model eHealthcare.Pages.consultationModel
+@{
+    ViewData["Title"] = "consultation";
+}
+
+<!doctype html>
+<html lang="en">
+
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>eHealthCare -- Home</title>
+</head>
+
+<body>
+    <!--<nav class="navbar navbar-expand-lg navbar-light bg-info text-white">
+        <a class="navbar-brand" href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="logo">
+                <path d="M336 64h-80c0-35.3-28.7-64-64-64s-64 28.7-64 64H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zM192 40c13.3 0 24 10.7 24 24s-10.7 24-24 24-24-10.7-24-24 10.7-24 24-24zm96 304c0 4.4-3.6 8-8 8h-56v56c0 4.4-3.6 8-8 8h-48c-4.4 0-8-3.6-8-8v-56h-56c-4.4 0-8-3.6-8-8v-48c0-4.4 3.6-8 8-8h56v-56c0-4.4 3.6-8 8-8h48c4.4 0 8 3.6 8 8v56h56c4.4 0 8 3.6 8 8v48zm0-192c0 4.4-3.6 8-8 8H104c-4.4 0-8-3.6-8-8v-16c0-4.4 3.6-8 8-8h176c4.4 0 8 3.6 8 8v16z" />
+            </svg>
+        </a>
+        <div class="mr-auto">
+            <h1 class="text-light mt-1">
+                Electronic Health Care System
+            </h1>
+        </div>
+        <br>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto text-light">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="consultation.html">Consultation</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="subscriptions.html">Subscriptions</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">Login</a>
+                </li>
+                </li>
+            </ul>
+        </div>
+    </nav>-->
+    <div class="container-lg mt-5">
+        <div class="row mb-1">
+            <h2>Book Online Consultation</h2>
+        </div>
+        <div class="row">
+            <div class="col-6 google-api p-2">
+                Google Api HERE
+            </div>
+            <div class="col-6 px-3">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home1">GP 1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#menu1">GP 2</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#menu2">GP 3</a>
+                    </li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content border mb-3">
+                    <div id="home1" class="container tab-pane mb-3 active">
+                        <br>
+                        <h3 id="doctorName">General Practioner 1</h3>
+                        <div class="form-group">
+                            <label for="selectDoctor">Doctor</label>
+                            <select id="selectDoctor" class="form-control">
+                                <option selected>Choose...</option>
+                                <option value="GP1">GP 1</option>
+                                <option value="GP2">GP 2</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="bookingDate">Booking Date</label>
+                            <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text">
+                        </div>
+                        <div class="for">
+                            <label for="bookingTime">Booking Time</label>
+                            <input class="form-control" id="date" name="date" placeholder="12:00 pm" type="text">
+                        </div>
+                        <div class="form-check mt-3">
+                            <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+                            <label class="form-check-label" for="inlineFormCheck">Urgent Booking</label>
+
+                        </div>
+                        <button type="submit" class="btn btn-primary mt-3">Book Consultation</button>
+                    </div>
+                    <div id="menu1" class="container tab-pane mb-3 fade">
+                        <br>
+                        <h3>Menu 1</h3>
+                        <p>
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                            commodo consequat.
+                        </p>
+                    </div>
+                    <div id="menu2" class="container tab-pane mb-3 fade">
+                        <br>
+                        <h3>Menu 2</h3>
+                        <p>
+                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                            laudantium, totam rem aperiam.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae ea perferendis eum
+                            illo a
+                            officiis voluptatem, adipisci reiciendis iure esse corporis dolores delectus quas, unde
+                            saepe! Voluptatibus, impedit. Aliquid, quam!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
+    <script>$(document).ready(function () {
+            $(".nav-tabs a").click(function () {
+                $(this).tab('show');
+            });
+            $('.nav-tabs a').on('shown.bs.tab', function (event) {
+                var x = $(event.target).text();         // active tab
+                var y = $(event.relatedTarget).text();  // previous tab
+                $(".act span").text(x);
+                $(".prev span").text(y);
+            });
+        });</script>
+</body>
+
+</html>

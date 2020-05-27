@@ -9,6 +9,7 @@ namespace eHealthcare.Pages
 {
     public class indexModel : PageModel
     {
+        
         public void OnGet()
         {
 
