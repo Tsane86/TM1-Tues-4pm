@@ -28,12 +28,6 @@
             <div class="text-center text-center mb-3">
                 <h1 class="">User Login</h1>
             </div>
-            <div class="list-group login text-center">
-                <a href="newUser" class="list-group-item list-group-item-action bg-primary text-light">
-                    I am a New
-                    User
-                </a>
-            </div>
         </div>
 
         <div class="login mt-5 text-center">
@@ -52,6 +46,9 @@
                     <input asp-for="@Model.Password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
                 </div>
                 <button type="submit" class="btn btn-primary">Log in</button>
+                <a href="newUser" class="btn btn-primary">
+                    Register for New Account
+                </a>
             </form>
         </div>
         <!---->
