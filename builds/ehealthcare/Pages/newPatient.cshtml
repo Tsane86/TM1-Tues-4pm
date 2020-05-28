@@ -1,0 +1,112 @@
+﻿@page
+@model eHealthcare.Pages.newPatientModel
+@{
+    ViewData["Title"] = "newPatient";
+}
+
+<!doctype html>
+<html lang="en">
+
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/hideShow.js" type="text/javascript"></script>
+    <title>Login</title>
+</head>
+
+<body>
+    <div class="container-sm mt-5">
+
+        <div class="registration-patient my-5">
+            <form method="post">
+                <h2>Registration</h2>
+                <div class="form-group row">
+                    <div class="col">
+                        <label asp-for="Patient.PatientEmail" class="for col-form-label text-md">Email Address</label>
+                        <input asp-for="Patient.PatientEmail" type="email" id="emailaddress" class="form-control" placeholder="Enter Email Address" required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col">
+                        <label asp-for="Patient.Person.Password" class="for col-form-label text-md">Password</label>
+                        <input asp-for="Patient.Person.Password" type="password" id="userpassword" class="form-control" placeholder="Enter Password" required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col">
+                        <label asp-for="Patient.Person.FirstName" class="for col-form-label text-md">First Name</label>
+                        <input asp-for="Patient.Person.FirstName" type="text" id="firstName" class="form-control" placeholder="Enter First Name" required>
+                    </div>
+                    <div class="col">
+                        <label asp-for="Patient.Person.LastName" class="for col-form-label text-md">Last Name</label>
+                        <input asp-for="Patient.Person.LastName" type="text" id="lastName" class="form-control" placeholder="Enter Last Name" required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col">
+                        <label asp-for="Patient.Person.Dob" class="for col-form-label text-md">Date of Birth</label>
+                        <input asp-for="Patient.Person.Dob" type="date" id="firstName" class="form-control" placeholder="dd/mm/yyyy" min="1900-01-01" max="2020-05-11" required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col">
+                        <label asp-for="Patient.MedicareNum" class="for col-form-label text-md">Medicare Number</label>
+                        <input asp-for="Patient.MedicareNum" type="text" id="medicareNumber" class="form-control" placeholder="Enter Medicare Number" required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col">
+                        <label asp-for="Patient.Person.Address" class="for col-form-label text-md">Address</label>
+                        <input asp-for="Patient.Person.Address" type="text" id="address1" class="form-control" placeholder="Enter Address" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label asp-for="Patient.Person.Suburb">Suburb</label>
+                        <input asp-for="Patient.Person.Suburb" type="text" class="form-control" id="inputCity" required>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label asp-for="Patient.Person.State">State</label>
+                        <select asp-for="Patient.Person.State" id="inputState" class="form-control" required>
+                            <option selected disabled></option>
+                            <option value="NSW">NSW</option>
+                            <option value="ACT">ACT</option>
+                            <option value="VIC">VIC</option>
+                            <option value="QLD">QLD</option>
+                            <option value="TAS">TAS</option>
+                            <option value="NT">NT</option>
+                            <option value="WA">WA</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label asp-for="Patient.Person.Postcode">Post Code</label>
+                        <input asp-for="Patient.Person.Postcode" type="text" class="form-control" id="inputZip" required>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <button class="btn btn-danger" type="reset">Reset</button>
+            </form>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
+
+</body>
+
+</html>
