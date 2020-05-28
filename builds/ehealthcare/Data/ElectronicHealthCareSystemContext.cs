@@ -1,4 +1,4 @@
-﻿using System;
+﻿/*using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 using eHealthcare.Models;
@@ -138,4 +138,4 @@ namespace eHealthcare
 
         partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
     }
-}
+}*/

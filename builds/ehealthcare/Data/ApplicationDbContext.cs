@@ -7,20 +7,12 @@ using eHealthcare.Models;
 
 namespace eHealthcare.Data
 {
-<<<<<<< Updated upstream
-    public class ApplicationDbContext : IdentityDbContext
-=======
     public class ApplicationDbContext : DbContext
->>>>>>> Stashed changes
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
         }
-<<<<<<< Updated upstream
-        public DbSet<Patient> Patient { get; set; }
-        public DbSet<Doctor> Doctor { get; set; }
-=======
         public virtual DbSet<Consultation> Consultation { get; set; }
         public virtual DbSet<Doctor> Doctor { get; set; }
         public virtual DbSet<MedicalCentre> MedicalCentre { get; set; }
@@ -60,7 +52,7 @@ namespace eHealthcare.Data
 
             modelBuilder.Entity<Doctor>(entity =>
             {
-                entity.Property(e => e.EmailAddress).HasMaxLength(255);
+                //entity.Property(e => e.EmailAddress).HasMaxLength(255);
 
                 entity.Property(e => e.PersonId)
                     .HasMaxLength(10)
@@ -94,9 +86,10 @@ namespace eHealthcare.Data
             {
                 entity.Property(e => e.MedicareNum).HasMaxLength(50);
 
-                entity.Property(e => e.PatientEmail)
-                    .HasColumnName("Patient_Email")
-                    .HasMaxLength(255);
+                //entity.Property(e => e.PatientEmail)
+                //    .HasColumnName("Patient_Email")
+                //    .HasMaxLength(255);
+
 
                 entity.HasOne(d => d.Person)
                     .WithMany(p => p.Patient)
@@ -110,9 +103,21 @@ namespace eHealthcare.Data
 
                 entity.Property(e => e.Address).HasMaxLength(255);
 
+                entity.Property(e => e.EmailAddress)
+                    .HasMaxLength(255)
+                    .HasColumnName("EAddress");
+
                 entity.Property(e => e.Dob)
                     .HasColumnName("DOB")
                     .HasColumnType("date");
+
+                entity.Property(e => e.Password)
+                    .HasColumnName("Password")
+                    .HasMaxLength(50);
+
+                entity.Property(e => e.Role)
+                    .HasColumnName("Role")
+                    .HasMaxLength(50);
 
                 entity.Property(e => e.FirstName).HasMaxLength(50);
 
@@ -144,6 +149,5 @@ namespace eHealthcare.Data
 
             //OnModelCreatingPartial(modelBuilder);
         }
->>>>>>> Stashed changes
     }
 }
