@@ -1,3 +1,4 @@
+
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +9,7 @@ using Microsoft.Extensions.Logging;
 
 namespace eHealthcare.Pages
 {
-    public class PrivacyModel : PageModel
+    public class PrivacyModel : BaseModel
     {
         private readonly ILogger<PrivacyModel> _logger;
 

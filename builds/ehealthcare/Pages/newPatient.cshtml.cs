@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace eHealthcare.Pages
 {
-    public class newPatientModel : PageModel
+    public class newPatientModel : BaseModel
     {
         private readonly eHealthcare.Data.ApplicationDbContext _context;
 

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Assignment c#\\eHealthcare.csproj": {}
+    "D:\\jasonbranch2\\TM1-Tues-4pm-JasonBranch2\\builds\\ehealthcare\\eHealthcare.csproj": {}
   },
   "projects": {
-    "D:\\Assignment c#\\eHealthcare.csproj": {
+    "D:\\jasonbranch2\\TM1-Tues-4pm-JasonBranch2\\builds\\ehealthcare\\eHealthcare.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Assignment c#\\eHealthcare.csproj",
+        "projectUniqueName": "D:\\jasonbranch2\\TM1-Tues-4pm-JasonBranch2\\builds\\ehealthcare\\eHealthcare.csproj",
         "projectName": "eHealthcare",
-        "projectPath": "D:\\Assignment c#\\eHealthcare.csproj",
+        "projectPath": "D:\\jasonbranch2\\TM1-Tues-4pm-JasonBranch2\\builds\\ehealthcare\\eHealthcare.csproj",
         "packagesPath": "C:\\Users\\Ronny Wassef\\.nuget\\packages\\",
-        "outputPath": "D:\\Assignment c#\\obj\\",
+        "outputPath": "D:\\jasonbranch2\\TM1-Tues-4pm-JasonBranch2\\builds\\ehealthcare\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Ronny Wassef\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -55,6 +55,10 @@
               "version": "[3.1.3, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
+              "target": "Package",
+              "version": "[3.1.3, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[3.1.3, )"
             }

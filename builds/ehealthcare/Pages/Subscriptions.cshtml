@@ -1,7 +1,23 @@
 ﻿@page
 @model eHealthcare.Pages.SubscriptionsModel
+@using Microsoft.AspNetCore.Http;
 @{
     ViewData["Title"] = "Subscriptions";
+
+    string role = HttpContext.Session.GetString("Role");
+
+    if (role == "Doctor")
+    {
+        Layout = "~/Pages/Shared/_DoctorsLayout.cshtml";
+    }
+    else if (role == "Patient")
+    {
+        Layout = "~/Pages/Shared/_PatientLayout.cshtml";
+    }
+    else
+    {
+        Layout = "~/Pages/Shared/_Layout.cshtml";
+    }
 }
 
 <!doctype html>

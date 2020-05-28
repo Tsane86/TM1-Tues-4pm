@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace eHealthcare.Pages
 {
-    public class SubscriptionsModel : PageModel
+    public class SubscriptionsModel : BaseModel
     {
         public void OnGet()
         {

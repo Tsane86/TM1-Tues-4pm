@@ -7,12 +7,8 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace eHealthcare.Pages
 {
-    public class indexModel : PageModel
+    public class indexModel : BaseModel
     {
-        
-        public void OnGet()
-        {
 
-        }
     }
 }

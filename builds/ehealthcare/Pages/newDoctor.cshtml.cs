@@ -8,7 +8,7 @@ using eHealthcare.Models;
 
 namespace eHealthcare.Pages
 {
-    public class newDoctorModel : PageModel
+    public class newDoctorModel : BaseModel
     {
         private readonly eHealthcare.Data.ApplicationDbContext _context;
 

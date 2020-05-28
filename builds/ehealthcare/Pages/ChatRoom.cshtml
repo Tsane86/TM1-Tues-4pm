@@ -1,0 +1,32 @@
+﻿
+@page
+@model eHealthcare.Pages.ChatRoomModel
+@using Microsoft.AspNetCore.Http;
+@{
+    string role = HttpContext.Session.GetString("Role");
+
+    if (role == "Doctor")
+    {
+        Layout = "~/Pages/Shared/_DoctorsLayout.cshtml";
+    }
+    else if (role == "Patient")
+    {
+        Layout = "~/Pages/Shared/_PatientLayout.cshtml";
+    }
+    else
+    {
+        Layout = "~/Pages/Shared/_Layout.cshtml";
+    }
+}
+
+<head>
+    <!-- Start of  Zendesk Widget script -->
+    <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=2693cd81-823e-4e10-a445-e59286608ad6"></script>
+    <!-- End of  Zendesk Widget script -->
+</head>
+
+<body>
+
+</body>
+
+

@@ -1,8 +1,25 @@
 ﻿@page
 @model eHealthcare.Pages.consultationModel
+@using Microsoft.AspNetCore.Http;
 @{
     ViewData["Title"] = "consultation";
+
+    string role = HttpContext.Session.GetString("Role");
+
+    if (role == "Doctor")
+    {
+        Layout = "~/Pages/Shared/_DoctorsLayout.cshtml";
+    }
+    else if (role == "Patient")
+    {
+        Layout = "~/Pages/Shared/_PatientLayout.cshtml";
+    }
+    else
+    {
+        Layout = "~/Pages/Shared/_Layout.cshtml";
+    }
 }
+
 
 <!doctype html>
 <html lang="en">
@@ -61,8 +78,10 @@
             <h2>Book Online Consultation</h2>
         </div>
         <div class="row">
-            <div class="col-6 google-api p-2">
-                Google Api HERE
+            <div class="col-6 p-2">
+                <iframe width="100%" height="100%" frameborder="0" style="border:0"
+                        src="https://www.google.com/maps/embed/v1/search?q=800 Old Princes Hwy&key=AIzaSyCphtLusSvelbM5qTH6LsJpJPP_fD3Aiho">
+                </iframe>
             </div>
             <div class="col-6 px-3">
                 <ul class="nav nav-tabs">
@@ -82,6 +101,33 @@
                     <div id="home1" class="container tab-pane mb-3 active">
                         <br>
                         <h3 id="doctorName">General Practioner 1</h3>
+                        <div class="form-group">
+                            <label for="selectDoctor">Doctor</label>
+                            <select id="selectDoctor" class="form-control" required>
+                                <option selected></option>
+                                <option value="">GP 1</option>
+                                <option value="">GP 2</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Consultation.ConsultationDate" for="bookingDate">Booking Date</label>
+                            <input asp-for="Consultation.ConsultationDate" type="date" class="form-control" placeholder="dd/mm/yyyy" min="2020-06-01" max="2021-05-11" required>
+                        </div>
+                        <div class="for">
+                            <label asp-for="Consultation.ConsultationTime">Booking Time</label>
+                            <input asp-for="Consultation.ConsultationTime" class="form-control" id="time" name="time" placeholder="12:00 pm" type="time" required>
+                        </div>
+                        <div class="form-check mt-3">
+                            <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+                            <label class="form-check-label" for="inlineFormCheck">Urgent Booking</label>
+
+                        </div>
+                        <button type="submit" class="btn btn-primary mt-3">Book Consultation</button>
+                    </div>
+
+                    <div id="menu1" class="container tab-pane mb-3 fade">
+                        <br>
+                        <h3 id="doctorName">General Practioner 2</h3>
                         <div class="form-group">
                             <label for="selectDoctor">Doctor</label>
                             <select id="selectDoctor" class="form-control">
@@ -105,27 +151,32 @@
                         </div>
                         <button type="submit" class="btn btn-primary mt-3">Book Consultation</button>
                     </div>
-                    <div id="menu1" class="container tab-pane mb-3 fade">
-                        <br>
-                        <h3>Menu 1</h3>
-                        <p>
-                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                            commodo consequat.
-                        </p>
-                    </div>
+
                     <div id="menu2" class="container tab-pane mb-3 fade">
                         <br>
-                        <h3>Menu 2</h3>
-                        <p>
-                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                            laudantium, totam rem aperiam.
-                        </p>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae ea perferendis eum
-                            illo a
-                            officiis voluptatem, adipisci reiciendis iure esse corporis dolores delectus quas, unde
-                            saepe! Voluptatibus, impedit. Aliquid, quam!
-                        </p>
+                        <h3 id="doctorName">General Practioner 3</h3>
+                        <div class="form-group">
+                            <label for="selectDoctor">Doctor</label>
+                            <select id="selectDoctor" class="form-control">
+                                <option selected>Choose...</option>
+                                <option value="GP1">GP 1</option>
+                                <option value="GP2">GP 2</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="bookingDate">Booking Date</label>
+                            <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text">
+                        </div>
+                        <div class="for">
+                            <label for="bookingTime">Booking Time</label>
+                            <input class="form-control" id="date" name="date" placeholder="12:00 pm" type="text">
+                        </div>
+                        <div class="form-check mt-3">
+                            <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+                            <label class="form-check-label" for="inlineFormCheck">Urgent Booking</label>
+
+                        </div>
+                        <button type="submit" class="btn btn-primary mt-3">Book Consultation</button>
                     </div>
                 </div>
             </div>
@@ -143,7 +194,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
             integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
             crossorigin="anonymous"></script>
-    <script>$(document).ready(function () {
+    <script>
+        $(document).ready(function () {
             $(".nav-tabs a").click(function () {
                 $(this).tab('show');
             });

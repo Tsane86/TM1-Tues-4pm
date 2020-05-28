@@ -12,7 +12,7 @@ using static eHealthcare.Startup;
 
 namespace eHealthcare.Pages
 {
-    public class loginModel : PageModel
+    public class loginModel : BaseModel
     {
         private readonly eHealthcare.Data.ApplicationDbContext _context;
 
@@ -20,7 +20,7 @@ namespace eHealthcare.Pages
         {
             _context = context;
         }
-        
+
         public void OnGet()
         {
 
@@ -39,15 +39,16 @@ namespace eHealthcare.Pages
         {
 
             Person person = (from people in _context.Person
-                               where people.EmailAddress == EmailAddress && people.Password == Password
-                               select people).FirstOrDefault();
-            if (person != null) 
+                             where people.EmailAddress == EmailAddress && people.Password == Password
+                             select people).FirstOrDefault();
+            if (person != null)
             {
                 //Person getPersonFromPatient = (from people in _context.Person
                 //                               where people.Id == patient.PersonId
                 //                               select people).FirstOrDefault();
                 HttpContext.Session.SetString("FirstName", person.FirstName);
                 HttpContext.Session.SetString("Role", person.Role);
+                HttpContext.Session.SetString("PersonId", person.Id.ToString());
                 return RedirectToPage("Index");
             }
             return Page();

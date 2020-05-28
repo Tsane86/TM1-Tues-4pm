@@ -1,7 +1,24 @@
 ﻿@page
 @model eHealthcare.Pages.indexModel
+@using Microsoft.AspNetCore.Http;
 @{
     ViewData["Title"] = "index";
+
+    string role = HttpContext.Session.GetString("Role");
+
+    if (role == "Doctor")
+    {
+        Layout = "~/Pages/Shared/_DoctorsLayout.cshtml";
+    }
+    else if (role == "Patient")
+    {
+        Layout = "~/Pages/Shared/_PatientLayout.cshtml";
+    }
+    else
+    {
+        Layout = "~/Pages/Shared/_Layout.cshtml";
+    }
+
 }
 
 <!doctype html>
@@ -18,6 +35,8 @@
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <title>eHealthCare -- Home</title>
+
+
 </head>
 
 <body>
@@ -56,14 +75,23 @@
             </ul>
         </div>
     </nav>-->
+
+
     <div class="container-lg mt-5">
         <div class="row mb-1">
             <h2>Welcome</h2>
         </div>
         <div class="row">
-            <div class="col-6 google-api p-2">
-                Google Api HERE
+
+
+            <div class="col-6 p-2">
+                @*MAP HERE*@
+                <iframe width="100%" height="100%" frameborder="0" style="border:0"
+                        src="https://www.google.com/maps/embed/v1/search?q=800 Old Princes Hwy&key=AIzaSyCphtLusSvelbM5qTH6LsJpJPP_fD3Aiho">
+                </iframe>
             </div>
+
+
             <div class="col-6 px-3">
                 <ul class="nav nav-tabs">
                     <li class="nav-item">
@@ -148,4 +176,3 @@
 </body>
 
 </html>
-
