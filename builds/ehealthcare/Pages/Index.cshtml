@@ -2,6 +2,22 @@
 @model eHealthcare.Pages.indexModel
 @{
     ViewData["Title"] = "index";
+
+    string role = Request.Cookies["role"];
+
+    if (role == "doctor")
+    {
+        Layout = "~/Pages/Shared/_DoctorsLayout.cshtml";
+    }
+    else if(role == "patient")
+    {
+        Layout = "~/Pages/Shared/_PatientLayout.cshtml";
+    }
+    else
+    {
+        Layout = "~/Pages/Shared/_Layout.cshtml";
+    }
+
 }
 
 <!doctype html>
@@ -19,9 +35,7 @@
     <link rel="stylesheet" href="css/style.css">
     <title>eHealthCare -- Home</title>
 
-    <!-- Start of  Zendesk Widget script -->
-    <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=2693cd81-823e-4e10-a445-e59286608ad6"></script>
-    <!-- End of  Zendesk Widget script -->
+    
 </head>
 
 <body>
@@ -160,4 +174,3 @@
 </body>
 
 </html>
-
