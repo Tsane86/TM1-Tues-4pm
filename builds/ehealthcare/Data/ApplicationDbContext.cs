@@ -32,7 +32,9 @@ namespace eHealthcare.Data
         {
             modelBuilder.Entity<Consultation>(entity =>
             {
-                entity.Property(e => e.ConsultationDate).HasColumnType("date");
+                entity.Property(e => e.ConsultationDate).HasColumnType("datetime");
+
+                //entity.Property(e => e.ConsultationTime);
 
                 entity.HasOne(d => d.Doctor)
                     .WithMany(p => p.Consultation)

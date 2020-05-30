@@ -1,6 +1,7 @@
 ﻿@page
 @model eHealthcare.Pages.patientAppointmentHubModel
 @using Microsoft.AspNetCore.Http;
+@using System.Globalization;
 @{
     string role = HttpContext.Session.GetString("Role");
 
@@ -51,25 +52,29 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>
-                                        <select id="Doctor">
-                                            <option value="Dr">Dr Test 1</option>
-                                            <option value="Dr">Dr Test 2</option>
-                                            <option value="Dr">Dr Test 3</option>
-                                    </td>
-                                    <td class="pt-3-half">General Medical Practice</td>
-                                    <td class="pt-3-half"><input type="date" name="appointmentDate" class="form-control" value="2020-01-01"></td>
-                                    <td class="pt-3-half"><input type="time" name="appointmentTime" class="form-control" value="12:00"></td>
-                                    <td>
-                                        <span class="table-remove">
-                                            <button type="button"
-                                                    class="btn btn-danger">
-                                                X
-                                            </button>
-                                        </span>
-                                    </td>
-                                </tr>
+                                @foreach (var appt in Model.Patient.Consultation)
+                                {
+                                    
+                                    <tr>
+                                        <td>
+                                            <select id="Doctor">
+                                                <option value="Dr">Dr @appt.Doctor.Person.FirstName</option>
+                                            </select>
+                                        </td>
+                                        
+                                        <td class="pt-3-half">General Medical Practice</td>
+                                        <td class="pt-3-half"><input type="text" name="appointmentDate" class="form-control" value=@appt.ConsultationDate.Value.Date> </td>
+                                        <td class="pt-3-half"><input type="time" name="appointmentTime" class="form-control" value=@appt.ConsultationDate.Value.TimeOfDay></td>
+                                        <td>
+                                            <span class="table-remove">
+                                                <button type="button"
+                                                        class="btn btn-danger">
+                                                    X
+                                                </button>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                }
                             </tbody>
                         </table>
                     </div>

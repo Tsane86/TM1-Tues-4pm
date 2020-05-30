@@ -10,9 +10,10 @@ namespace eHealthcare.Pages
 {
     public class BaseModel : PageModel
     {
-        public void OnPostLogout()
+        public IActionResult OnPostLogout()
         {
             HttpContext.Session.Clear();
+            return RedirectToPage("Index");
         }
     }
 }

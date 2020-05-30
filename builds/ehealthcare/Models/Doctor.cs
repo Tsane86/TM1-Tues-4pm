@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace eHealthcare.Models
 {
@@ -12,7 +13,7 @@ namespace eHealthcare.Models
         }
 
         public long Id { get; set; }
-        public string EmailAddress { get; set; }
+        //public string EmailAddress { get; set; }
         public string Speciality { get; set; }
         public long PersonId { get; set; }
         public long? MedicalCentreId { get; set; }

@@ -11,7 +11,7 @@ namespace eHealthcare.Models
         }
 
         public long Id { get; set; }
-        public TimeSpan? ConsultationTime { get; set; }
+        //public TimeSpan? ConsultationTime { get; set; }
         public DateTime? ConsultationDate { get; set; }
         public long? PatientId { get; set; }
         public long? DoctorId { get; set; }
