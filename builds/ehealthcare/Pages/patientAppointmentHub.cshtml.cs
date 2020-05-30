@@ -19,6 +19,8 @@ namespace eHealthcare.Pages
             _context = context;
         }
         public Patient Patient { get; set; }
+        [BindProperty]
+        public Consultation Consultation{ get; set; }
         public void OnGet()
         {
             //var patient = (from patients in _context.Patient
@@ -37,6 +39,15 @@ namespace eHealthcare.Pages
 
 
 
+        }
+
+        public IActionResult OnPostDelete() 
+        {
+            var consultation =_context.Consultation.Find(Consultation.Id);
+            _context.Consultation.Remove(consultation);
+            _context.SaveChanges();
+
+            return RedirectToPage("patientAppointmentHub");
         }
     }
 }

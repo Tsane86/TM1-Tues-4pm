@@ -1,5 +1,5 @@
 ﻿@model BaseModel
-
+@using Microsoft.AspNetCore.Http;
 <!doctype html>
 <html lang="en">
 
@@ -61,7 +61,7 @@
 
 
                 <li class="nav-item">
-                    <label class="nav-link">| Logged in as: Patient</label>
+                    <label class="nav-link">| Logged in as: @Context.Session.GetString("FirstName") @Context.Session.GetString("LastName")</label>
                 </li>
 
             </ul>

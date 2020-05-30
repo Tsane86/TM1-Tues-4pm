@@ -524,3 +524,4 @@ D:\jasonbranch2\TM1-Tues-4pm-JasonBranch2\builds\ehealthcare\obj\Debug\netcoreap
 D:\jasonbranch2\TM1-Tues-4pm-JasonBranch2\builds\ehealthcare\obj\Debug\netcoreapp3.1\eHealthcare.MvcApplicationPartsAssemblyInfo.cs
 D:\jasonbranch2\TM1-Tues-4pm-JasonBranch2\builds\ehealthcare\obj\Debug\netcoreapp3.1\eHealthcare.MvcApplicationPartsAssemblyInfo.cache
 D:\jasonbranch2\TM1-Tues-4pm-JasonBranch2\builds\ehealthcare\obj\Debug\netcoreapp3.1\Razor\Pages\Base.cshtml.g.cs
+D:\jasonbranch2\TM1-Tues-4pm-JasonBranch2\builds\ehealthcare\obj\Debug\netcoreapp3.1\Razor\Pages\doctorDashboard.cshtml.g.cs

@@ -47,6 +47,7 @@ namespace eHealthcare.Pages
                 //                               where people.Id == patient.PersonId
                 //                               select people).FirstOrDefault();
                 HttpContext.Session.SetString("FirstName", person.FirstName);
+                HttpContext.Session.SetString("LastName", person.LastName);
                 HttpContext.Session.SetString("Role", person.Role);
                 HttpContext.Session.SetString("PersonId", person.Id.ToString());
                 return RedirectToPage("Index");

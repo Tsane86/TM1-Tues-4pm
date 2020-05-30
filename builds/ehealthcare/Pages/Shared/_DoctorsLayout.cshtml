@@ -1,4 +1,5 @@
 ﻿@model BaseModel
+@using Microsoft.AspNetCore.Http;
 <!doctype html>
 <html lang="en">
 
@@ -37,7 +38,7 @@
                     <a class="nav-link" href="index">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="consultation">Consultation</a>
+                    <a class="nav-link" href="doctorDashboard">Dashboard</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="subscriptions">Subscriptions</a>
@@ -51,7 +52,7 @@
 
 
                 <li class="nav-item">
-                    <label class="nav-link">Logged in as: Doctor</label>
+                    <label class="nav-link">Logged in as: Doctor @Context.Session.GetString("FirstName") @Context.Session.GetString("LastName")</label>
                 </li>
             </ul>
         </div>

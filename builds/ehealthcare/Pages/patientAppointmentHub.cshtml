@@ -58,20 +58,25 @@
                                     <tr>
                                         <td>
                                             <select id="Doctor">
-                                                <option value="Dr">Dr @appt.Doctor.Person.FirstName</option>
+                                                <option value="Dr">Dr @appt.Doctor.Person.FirstName @appt.Doctor.Person.LastName</option>
                                             </select>
                                         </td>
                                         
                                         <td class="pt-3-half">General Medical Practice</td>
                                         <td class="pt-3-half"><input type="text" name="appointmentDate" class="form-control" value=@appt.ConsultationDate.Value.Date> </td>
                                         <td class="pt-3-half"><input type="time" name="appointmentTime" class="form-control" value=@appt.ConsultationDate.Value.TimeOfDay></td>
-                                        <td>
-                                            <span class="table-remove">
-                                                <button type="button"
-                                                        class="btn btn-danger">
-                                                    X
-                                                </button>
-                                            </span>
+                                        <td>         
+                                            <form asp-page-handler="delete" method="post">
+                                                <input type="hidden" asp-for="Consultation.Id" value=@appt.Id />
+                                                <span class="table-remove">
+
+                                                    <button type="submit"
+                                                            class="btn btn-danger">
+                                                        X
+                                                    </button>
+
+                                                </span>
+                                            </form>
                                         </td>
                                     </tr>
                                 }
